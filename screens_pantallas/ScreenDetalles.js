@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
 
-export default ({navigation})=> {
+const ScreenDetalles = ({navigation})=> {
     const body= navigation.getParam('body','nada');
     const title= navigation.getParam('title','nada');
     const nombreUsuario1=navigation.getParam('name','la bestia2');
@@ -23,3 +23,5 @@ export default ({navigation})=> {
             justifyContent: 'center',
         },
     });
+
+export default ScreenDetalles

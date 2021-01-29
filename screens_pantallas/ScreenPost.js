@@ -4,7 +4,7 @@ import React, {useState,useEffect} from "react";
   import ListaItemNombres from '../componentes/ListaItem';
   //import ScreenPost from "./ScreenPost";
 
-    export default ({navigation}) => {
+     const ScreenPost =({navigation}) => {
 
     const userId=navigation.getParam('user_id','Dato default');
     const nombreUsuario=navigation.getParam('name','la bestia');
@@ -47,3 +47,5 @@ import React, {useState,useEffect} from "react";
     }
   });
   
+
+  export default ScreenPost;

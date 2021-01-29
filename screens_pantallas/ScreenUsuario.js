@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
 
 
-export default ({navigation}) => {
+const ScreenUsuario= ({navigation}) => {
   const [cargando, setCargando]=useState(true);
   const [user,setUsers]=useState([]);
 
@@ -44,3 +44,6 @@ export default ({navigation}) => {
     </View>
   );
 };
+
+
+export default ScreenUsuario;
