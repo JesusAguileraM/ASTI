@@ -2,9 +2,10 @@ import React, {useState,useEffect} from "react";
   import { StyleSheet, View, Text,FlatList} from "react-native";
   //import { initialWindowMetrics } from "react-native-safe-area-context";
   import ListaItemNombres from '../componentes/ListaItem';
+  import IconoCarga from '../componentes/IconoCarga';
   //import ScreenPost from "./ScreenPost";
 
-     const ScreenPost =({navigation}) => {
+    const ScreenPost =({navigation}) => {
 
     const userId=navigation.getParam('user_id','Dato default');
     const nombreUsuario=navigation.getParam('name','la bestia');
@@ -22,7 +23,7 @@ import React, {useState,useEffect} from "react";
     
     return (
       <View style={styles.container}>
-        {cargando ? <Text> Cargando </Text>: 
+        {cargando ? <IconoCarga/>: 
           <FlatList 
           style={styles.lista}
           data={post.filter(x => x.userId === userId)} // el primer user_id es de post y el otro userId es del usuario de la ventana que me trajo aqui
@@ -39,7 +40,7 @@ import React, {useState,useEffect} from "react";
     container: {
       flex: 1,
       backgroundColor: "#fff",
-      alignItems: "flex-start",
+      alignItems: "center",
       justifyContent: "center",
     },
     lista:{
